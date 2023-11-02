@@ -1,6 +1,6 @@
 RAYLIB_FLAGS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 main:
-	cc -g -o bunda main.c BirdManager.c Jump.c GravitySimulation.c Window.c $(RAYLIB_FLAGS)
-	./bunda
+	cc -g -o game main.c BirdManager.c Jump.c GravitySimulation.c Window.c $(RAYLIB_FLAGS)
+	./game
 clean:
-	rm bunda
+	rm game
