@@ -2,7 +2,7 @@
 #include "Window.h"
 
 #define TARGET_FPS 60
-#define TITLE "bunda kkkkk"
+#define TITLE "JANELA BIRD"
  
 void initWindow() {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, TITLE);
