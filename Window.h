@@ -5,5 +5,6 @@
 #define SCREEN_HEIGHT 450
 
 void initWindow();
+void manageWindow();
 
 #endif

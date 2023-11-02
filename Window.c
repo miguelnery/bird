@@ -8,3 +8,7 @@ void initWindow() {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, TITLE);
     SetTargetFPS(TARGET_FPS);
 }
+
+void manageWindow() {
+    ClearBackground(RAYWHITE);
+}
