@@ -1,27 +1,17 @@
 #include <stdio.h>
+#include "BirdManager.h"
 #include "GravitySimulation.h"
-#include "Jump.h"
 #include "raylib.h"
-#include "raymath.h"
 #include "Window.h"
-
-Vector2 ballPosition = {(float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2};
-Vector2 ballVelocity = {0.0f, 0.0f};
 
 int main() {
     initWindow();
-    addToGravitySimulation(&ballVelocity); 
+    initBird((float)SCREEN_WIDTH / 2, (float)SCREEN_HEIGHT / 2);
     while(!WindowShouldClose()) {
-        detectJumpInput(&ballVelocity);
-        if(ballPosition.y <= SCREEN_HEIGHT) {
-            ballPosition = Vector2Add(ballPosition, ballVelocity);
-            simulateGravity();
-        }
+        simulateGravity();
         BeginDrawing();
-
-        ClearBackground(RAYWHITE);
-        DrawCircleV(ballPosition, 15, MAROON);
-
+        manageWindow();
+        manageBird();
         EndDrawing();
     }
     CloseWindow();
